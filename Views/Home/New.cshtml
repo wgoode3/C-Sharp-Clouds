@@ -1,0 +1,20 @@
+<!-- <form action="/create" method="post">
+    <p>Altitude: <input type="number" name="altitude" /></p>
+    <p>Type: <input type="name" name="type" /></p>
+    <input type="submit" />
+</form> -->
+
+@model Cloud
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="altitude"></label>
+        <input asp-for="altitude" value="0" class="form-control" />
+        <span asp-validation-for="altitude"></span> 
+    </div>
+    <div class="form-group">
+        <label asp-for="type"></label>
+        <input asp-for="type" class="form-control" />
+        <span asp-validation-for="type"></span>
+    </div>
+    <input type="submit" class="btn btn-primary" />    
+</form>
